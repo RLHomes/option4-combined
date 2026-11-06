@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Combined homepage, desktop</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6F3EE}
+a{color:#1C1B19}a:hover{color:#7A5C3E}
+@keyframes fadeA{0%,28%{opacity:1}33%,95%{opacity:0}100%{opacity:1}}
+@keyframes fadeB{0%,28%{opacity:0}33%,61%{opacity:1}66%,100%{opacity:0}}
+@keyframes fadeC{0%,61%{opacity:0}66%,95%{opacity:1}100%{opacity:0}}
+@keyframes drift{0%{transform:scale(1)}100%{transform:scale(1.06)}}
+@keyframes rise{0%{opacity:0;transform:translateY(24px)}100%{opacity:1;transform:none}}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+.sA{animation:fadeA 18s infinite,drift 18s infinite alternate}
+.sB{animation:fadeB 18s infinite,drift 18s infinite alternate}
+.sC{animation:fadeC 18s infinite,drift 18s infinite alternate}
+.rise{animation:rise 1.4s cubic-bezier(.2,.7,.2,1) both}
+.row{transition:background .4s ease}
+.row:hover{background:#EFE9E0}
+.row:hover .arr{animation:nudge 1s infinite}
+.card .ph{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.card:hover .ph{transform:scale(1.04)}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, sans-serif; color: #1C1B19; background: #F6F3EE; font-size: 16px; line-height: 1.6;">
+
+<header style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 28px 48px; color: #F6F3EE;">
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase;">
+<a href="Services.dc.html" style="color: #F6F3EE; text-decoration: none;">Services</a>
+<a href="#work" style="color: #F6F3EE; text-decoration: none;">Portfolio</a>
+<a href="#process" style="color: #F6F3EE; text-decoration: none;">Process</a>
+<a href="#contact" style="color: #F6F3EE; text-decoration: none;">About</a>
+</nav>
+<a href="#top" style="font-family: 'Cormorant Garamond', serif; font-size: 30px; font-style: italic; color: #F6F3EE; text-decoration: none;">Deb Ellis Designs</a>
+<a href="#contact" style="font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #F6F3EE; text-decoration: none; border: 1px solid rgba(246,243,238,.7); padding: 12px 20px;">Schedule a walkthrough</a>
+</header>
+
+<section id="top" aria-label="Featured rooms" style="position: relative; height: 860px; margin-top: -104px; overflow: hidden; background: #3A342D;">
+<div class="sA" style="position: absolute; inset: 0; background: #4A4038;"></div>
+<div class="sB" style="position: absolute; inset: 0; background: #5B5146; opacity: 0;"></div>
+<div class="sC" style="position: absolute; inset: 0; background: #3F3A33; opacity: 0;"></div>
+<div style="position: absolute; inset: 0; background: rgba(20,18,16,.28);"></div>
+<p style="position: absolute; top: 140px; right: 48px; margin: 0; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: rgba(246,243,238,.75);">Photo rotation · 3 hero images, 6s each</p>
+<div class="rise" style="position: absolute; left: 48px; right: 48px; bottom: 72px; max-width: 980px; color: #F6F3EE;">
+<h1 style="margin: 0 0 20px; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(44px, 6.4vw, 92px); line-height: 1.02; letter-spacing: -.01em;">Home staging and interior design across Greater Boston</h1>
+<p style="margin: 0; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: rgba(246,243,238,.85);">Living room · [Town] · Staged for sale</p>
+</div>
+</section>
+
+<section id="services" aria-label="Services" style="max-width: 1344px; margin: 0 auto; padding: 120px 48px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 56px;">
+<div style="max-width: 860px;">
+<p style="margin: 0 0 20px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #7A5C3E;">Services</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.35;">Since 2008, Deb Ellis and her team have staged and designed hundreds of homes across Greater Boston, from Back Bay condominiums to new construction in Westwood, all of it furnished and installed from our own studio and warehouse in Norwood.</p>
+</div>
+<a href="Services.dc.html" style="font-size: 13px; letter-spacing: .1em; text-transform: uppercase; border-bottom: 1px solid #1C1B19; padding-bottom: 4px; text-decoration: none;">All services</a>
+</div>
+<a class="row" href="Services.dc.html" style="display: grid; grid-template-columns: 72px minmax(0, 1fr) minmax(0, 1.4fr) 40px; gap: 24px; align-items: baseline; padding: 36px 16px; border-top: 1px solid #D6CDBF; text-decoration: none;">
+<span style="font-size: 13px; color: #7A5C3E;">01</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 40px; line-height: 1.05;">Interior Design</span><span style="color: #4A453F;">Whole-house and single-room design, renovations included, where we choose finishes, fixtures and layout with you and your contractor and then furnish and style every room.</span><span class="arr" aria-hidden="true" style="font-size: 22px;">→</span>
+</a>
+<a class="row" href="Services.dc.html" style="display: grid; grid-template-columns: 72px minmax(0, 1fr) minmax(0, 1.4fr) 40px; gap: 24px; align-items: baseline; padding: 36px 16px; border-top: 1px solid #D6CDBF; text-decoration: none;">
+<span style="font-size: 13px; color: #7A5C3E;">02</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 40px; line-height: 1.05;">Home Staging</span><span style="color: #4A453F;">We furnish vacant and occupied listings from our own inventory, and we have staged a listing on less than a day's notice when an agent needed it.</span><span class="arr" aria-hidden="true" style="font-size: 22px;">→</span>
+</a>
+<a class="row" href="Services.dc.html" style="display: grid; grid-template-columns: 72px minmax(0, 1fr) minmax(0, 1.4fr) 40px; gap: 24px; align-items: baseline; padding: 36px 16px; border-top: 1px solid #D6CDBF; text-decoration: none;">
+<span style="font-size: 13px; color: #7A5C3E;">03</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 40px; line-height: 1.05;">Post-Loss Interior Design</span><span style="color: #4A453F;">When fire, water or storm damage forces a family out, we design and furnish the house for their return, working from the insurance scope alongside the adjuster and the restoration contractor.</span><span class="arr" aria-hidden="true" style="font-size: 22px;">→</span>
+</a>
+<a class="row" href="Services.dc.html" style="display: grid; grid-template-columns: 72px minmax(0, 1fr) minmax(0, 1.4fr) 40px; gap: 24px; align-items: baseline; padding: 36px 16px; border-top: 1px solid #D6CDBF; border-bottom: 1px solid #D6CDBF; text-decoration: none;">
+<span style="font-size: 13px; color: #7A5C3E;">04</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 40px; line-height: 1.05;">Custom Projects</span><span style="color: #4A453F;">Model homes and units for developers, turnkey staging packages at a set price, holiday installations, and any other project that needs our inventory and our team.</span><span class="arr" aria-hidden="true" style="font-size: 22px;">→</span>
+</a>
+</section>
+
+<section id="work" aria-label="Recent projects" style="max-width: 1344px; margin: 0 auto; padding: 0 48px 120px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 40px;">
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 52px; line-height: 1;">Recent projects</h2>
+<a href="#work" style="font-size: 13px; letter-spacing: .1em; text-transform: uppercase;">All projects</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 40px;">
+<a class="card" href="#work" style="display: block; text-decoration: none;"><div style="aspect-ratio: 4/3; overflow: hidden; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));"><div class="ph" style="background: #D6CEC2; display: flex; align-items: flex-end; padding: 10px; font-size: 11px; color: #5A5045;">Before</div><div class="ph" style="background: #BFB5A7; display: flex; align-items: flex-end; padding: 10px; font-size: 11px; color: #3F3830;">After</div></div><p style="margin: 18px 0 2px; font-family: 'Cormorant Garamond', serif; font-size: 28px;">[Project name], [Town]</p><p style="margin: 0; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #7A5C3E;">Home Staging · [Result]</p></a>
+<a class="card" href="#work" style="display: block; text-decoration: none;"><div style="aspect-ratio: 4/3; overflow: hidden; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));"><div class="ph" style="background: #D1C9BC; display: flex; align-items: flex-end; padding: 10px; font-size: 11px; color: #5A5045;">Before</div><div class="ph" style="background: #B9AF9F; display: flex; align-items: flex-end; padding: 10px; font-size: 11px; color: #3F3830;">After</div></div><p style="margin: 18px 0 2px; font-family: 'Cormorant Garamond', serif; font-size: 28px;">[Project name], [Town]</p><p style="margin: 0; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #7A5C3E;">Interior Design · [Result]</p></a>
+<a class="card" href="#work" style="display: block; text-decoration: none;"><div style="aspect-ratio: 4/3; overflow: hidden; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));"><div class="ph" style="background: #D4CCBF; display: flex; align-items: flex-end; padding: 10px; font-size: 11px; color: #5A5045;">Before</div><div class="ph" style="background: #BCB2A3; display: flex; align-items: flex-end; padding: 10px; font-size: 11px; color: #3F3830;">After</div></div><p style="margin: 18px 0 2px; font-family: 'Cormorant Garamond', serif; font-size: 28px;">[Project name], [Town]</p><p style="margin: 0; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #7A5C3E;">Post-Loss Design · [Result]</p></a>
+</div>
+</section>
+
+<section aria-label="Client reviews" style="background: #EAE4DA; padding: 112px 48px;">
+<div style="max-width: 1248px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 64px;">
+<figure style="margin: 0;"><blockquote style="margin: 0 0 20px; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1.3;">“Miracle worker! Packed, staged, cleaned, and even painted my listing with less than 12 hours notice!”</blockquote><figcaption style="font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #5A5045;">John C., John Canning Properties</figcaption></figure>
+<figure style="margin: 0;"><blockquote style="margin: 0 0 20px; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1.3;">“Having her stage the new construction homes I’ve sold is the best marketing money I could have spent!”</blockquote><figcaption style="font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #5A5045;">Katie F., Friel Real Estate</figcaption></figure>
+</div>
+</section>
+
+<section id="process" aria-label="How a project runs" style="max-width: 1344px; margin: 0 auto; padding: 120px 48px;">
+<h2 style="margin: 0 0 56px; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 52px; line-height: 1;">How a project runs</h2>
+<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 48px;">
+<li style="border-top: 1px solid #1C1B19; padding-top: 24px;"><p style="margin: 0 0 4px; font-family: 'Cormorant Garamond', serif; font-size: 44px; font-style: italic; color: #7A5C3E; line-height: 1;">i.</p><p style="margin: 12px 0 8px; font-family: 'Cormorant Garamond', serif; font-size: 28px; line-height: 1.1;">Walkthrough</p><p style="margin: 0; color: #4A453F;">We walk the house with you, measure the rooms, and talk through the buyer or the way you want to live there.</p></li>
+<li style="border-top: 1px solid #1C1B19; padding-top: 24px;"><p style="margin: 0 0 4px; font-family: 'Cormorant Garamond', serif; font-size: 44px; font-style: italic; color: #7A5C3E; line-height: 1;">ii.</p><p style="margin: 12px 0 8px; font-family: 'Cormorant Garamond', serif; font-size: 28px; line-height: 1.1;">Proposal</p><p style="margin: 0; color: #4A453F;">You get a written plan with the rooms, the pieces and a fixed price before anything moves.</p></li>
+<li style="border-top: 1px solid #1C1B19; padding-top: 24px;"><p style="margin: 0 0 4px; font-family: 'Cormorant Garamond', serif; font-size: 44px; font-style: italic; color: #7A5C3E; line-height: 1;">iii.</p><p style="margin: 12px 0 8px; font-family: 'Cormorant Garamond', serif; font-size: 28px; line-height: 1.1;">Install</p><p style="margin: 0; color: #4A453F;">Our team pulls the furniture from Norwood and installs the house in [#] day, art and linens included.</p></li>
+<li style="border-top: 1px solid #1C1B19; padding-top: 24px;"><p style="margin: 0 0 4px; font-family: 'Cormorant Garamond', serif; font-size: 44px; font-style: italic; color: #7A5C3E; line-height: 1;">iv.</p><p style="margin: 12px 0 8px; font-family: 'Cormorant Garamond', serif; font-size: 28px; line-height: 1.1;">Pickup</p><p style="margin: 0; color: #4A453F;">When the house sells, or the rental term ends, we schedule pickup around your closing date.</p></li>
+</ol>
+</section>
+
+<section id="contact" style="background: #1C1B19; color: #F6F3EE; padding: 112px 48px;">
+<div style="max-width: 1248px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 40px;">
+<div style="max-width: 640px;">
+<h2 style="margin: 0 0 16px; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(40px, 4.6vw, 64px); line-height: 1.05;">Schedule a walkthrough</h2>
+<p style="margin: 0; color: #BDB4A8;">Deb or a member of the team will walk the house with you, talk through what it needs, and send a written proposal within [#] business days.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+<a href="#contact" style="background: #F6F3EE; color: #1C1B19; text-decoration: none; padding: 16px 28px; font-size: 13px; letter-spacing: .1em; text-transform: uppercase;">Book a time</a>
+<a href="tel:7815895989" style="color: #F6F3EE; font-size: 15px;">781-589-5989</a>
+</div>
+</div>
+<p style="max-width: 1248px; margin: 96px auto 0; padding-top: 24px; border-top: 1px solid #3A3631; font-size: 13px; color: #9C9387;">Deb Ellis Designs, Inc. · Norwood, MA · [Instagram] · [Houzz] · [LinkedIn]</p>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4700}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
