@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Combined homepage with real photography, desktop</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6F3EE}
+a{color:#1C1B19}a:hover{color:#7A5C3E}
+img{display:block}
+@keyframes xf{0%{opacity:0}4%{opacity:1}25%{opacity:1}29%{opacity:0}100%{opacity:0}}
+@keyframes drift{0%{transform:scale(1)}100%{transform:scale(1.09)}}
+@keyframes rise{0%{opacity:0;transform:translateY(28px)}100%{opacity:1;transform:none}}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+@keyframes cue{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(8px);opacity:1}}
+.slide{position:absolute;inset:0;opacity:0;animation:xf 24s infinite both}
+.slide img{width:100%;height:100%;object-fit:cover;animation:drift 12s ease-in-out infinite alternate}
+.cap{position:absolute;left:0;top:0;opacity:0;animation:xf 24s infinite both;white-space:nowrap}
+.d0{animation-delay:-1s}.d1{animation-delay:5s}.d2{animation-delay:11s}.d3{animation-delay:17s}
+.rise{animation:rise 1.4s cubic-bezier(.2,.7,.2,1) both}
+.rise2{animation:rise 1.4s .25s cubic-bezier(.2,.7,.2,1) both}
+.cue{animation:cue 2.4s ease-in-out infinite}
+.row{display:grid;grid-template-columns:64px minmax(0,1fr) minmax(0,1.3fr) 220px;gap:28px;align-items:center;padding:28px 16px;border-top:1px solid #D6CDBF;text-decoration:none;transition:background .4s ease}
+.row:hover{background:#EFE9E0}
+.row:hover .arr{animation:nudge 1s infinite}
+.thumb{height:148px;overflow:hidden;clip-path:inset(10% 8% 10% 8%);transition:clip-path .8s cubic-bezier(.2,.7,.2,1)}
+.thumb img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.row:hover .thumb{clip-path:inset(0 0 0 0)}
+.row:hover .thumb img{transform:scale(1)}
+.strip{overflow:hidden}
+.track{display:flex;gap:16px;width:max-content;animation:marquee 60s linear infinite}
+.strip:hover .track{animation-play-state:paused}
+.track img{height:300px;width:auto;object-fit:cover}
+.pgrid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:40px 32px}
+.c7{grid-column:span 7}.c5{grid-column:span 5}
+.card{display:block;text-decoration:none}
+.frame{position:relative;overflow:hidden;background:#D6CEC2}
+.frame img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.2,1),opacity .9s ease}
+.card:hover .frame img{transform:scale(1.045)}
+.frame .alt{position:absolute;inset:0;opacity:0}
+.card:hover .frame .alt{opacity:1}
+.tall{height:640px}.short{height:500px}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center}
+.band{position:relative;height:560px;overflow:hidden}
+.band img{position:absolute;left:0;top:-15%;width:100%;height:130%;object-fit:cover}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:48px}
+@supports (animation-timeline: view()){
+@keyframes rv{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:none}}
+@keyframes px{from{transform:translateY(-9%)}to{transform:translateY(9%)}}
+@keyframes wipe{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+.rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% cover 28%}
+.wipe{animation:wipe linear both;animation-timeline:view();animation-range:entry 0% cover 40%}
+.band img{animation:px linear both;animation-timeline:view()}
+}
+@media (prefers-reduced-motion: reduce){
+.slide,.cap,.slide img,.track,.rise,.rise2,.cue,.rv,.wipe,.band img{animation:none !important}
+.d0{opacity:1}
+}
+@media (max-width: 900px){
+.row{grid-template-columns:40px minmax(0,1fr);gap:12px 16px}
+.row .desc{grid-column:2}
+.row .thumb{grid-column:1 / -1;height:200px;clip-path:none}
+.row .arr{display:none}
+.pgrid{grid-template-columns:minmax(0,1fr)}
+.c7,.c5{grid-column:auto}
+.tall,.short{height:420px}
+.split{grid-template-columns:minmax(0,1fr);gap:40px}
+.steps{grid-template-columns:minmax(0,1fr)}
+.track img{height:200px}
+.band{height:380px}
+.hidem{display:none !important}
+}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, sans-serif; color: #1C1B19; background: #F6F3EE; font-size: 16px; line-height: 1.6;">
+
+<header style="position: relative; z-index: 3; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 28px 48px; color: #F6F3EE;">
+<nav class="hidem" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase;">
+<a href="#services" style="color: #F6F3EE; text-decoration: none;">Services</a>
+<a href="#work" style="color: #F6F3EE; text-decoration: none;">Portfolio</a>
+<a href="#process" style="color: #F6F3EE; text-decoration: none;">Process</a>
+<a href="#studio" style="color: #F6F3EE; text-decoration: none;">About</a>
+</nav>
+<a href="#top" style="font-family: 'Cormorant Garamond', serif; font-size: 30px; font-style: italic; color: #F6F3EE; text-decoration: none;">Deb Ellis Designs</a>
+<a href="#contact" style="font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #F6F3EE; text-decoration: none; border: 1px solid rgba(246,243,238,.7); padding: 12px 20px;">Schedule a walkthrough</a>
+</header>
+
+<section id="top" aria-label="Featured rooms" style="position: relative; height: 900px; margin-top: -104px; overflow: hidden; background: #3A342D;">
+<div class="slide d0"><img src="images/hero1.jpg" alt="Living room with a wood-paneled octagonal ceiling and a cream sectional, South End"></div>
+<div class="slide d1"><img src="images/hero2.jpg" alt="Renovated open living room with a sectional and ring pendant lights, Back Bay"></div>
+<div class="slide d2"><img src="images/hero3.jpg" alt="Staged sunroom with a green leather sofa and stone accent wall, Brighton"></div>
+<div class="slide d3"><img src="images/hero4.jpg" alt="Staged corner living room with floor-to-ceiling windows, South End"></div>
+<div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,18,16,.45) 0%, rgba(20,18,16,.08) 30%, rgba(20,18,16,.12) 55%, rgba(20,18,16,.62) 100%);"></div>
+<div style="position: absolute; left: 48px; right: 48px; bottom: 72px; color: #F6F3EE; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<div style="max-width: 960px;">
+<h1 class="rise" style="margin: 0 0 24px; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(44px, 6.4vw, 92px); line-height: 1.02; letter-spacing: -.01em;">Home staging and interior design across Greater Boston</h1>
+<div class="rise2" style="position: relative; height: 22px; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: rgba(246,243,238,.9);">
+<span class="cap d0">Living room · South End · Interior design</span>
+<span class="cap d1">Living room · Back Bay · Full renovation</span>
+<span class="cap d2">Sunroom · Brighton · Staged for sale</span>
+<span class="cap d3">Living room · South End · Staged for sale</span>
+</div>
+</div>
+<a href="#services" class="cue hidem" style="color: #F6F3EE; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; text-decoration: none;">Scroll ↓</a>
+</div>
+</section>
+
+<section id="services" aria-label="Services" style="max-width: 1344px; margin: 0 auto; padding: 128px 48px 120px;">
+<div class="rv" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px 72px; margin-bottom: 72px;">
+<div>
+<p style="margin: 0 0 20px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #7A5C3E;">Services</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.35;">Since 2008, Deb Ellis and her team have staged and designed hundreds of homes across Greater Boston, from Back Bay condominiums to new construction in Wellesley, all of it furnished and installed from our own studio and warehouse in Norwood.</p>
+</div>
+<div style="align-self: end; color: #4A453F;">
+<p style="margin: 0 0 16px;">Most of our work comes from three kinds of clients: agents and builders who need a listing ready for photos, homeowners renovating or furnishing a house they plan to live in, and families moving back home after fire or water damage. The same designers and the same install crew handle all three, and every staging job is furnished from our own warehouse.</p>
+<a href="#services" style="font-size: 13px; letter-spacing: .1em; text-transform: uppercase; border-bottom: 1px solid #1C1B19; padding-bottom: 4px; text-decoration: none;">All services</a>
+</div>
+</div>
+<a class="row rv" href="#services">
+<span style="font-size: 13px; color: #7A5C3E;">01</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 40px; line-height: 1.05;">Interior Design</span><span class="desc" style="color: #4A453F;">Whole-house and single-room design, renovations included. We choose finishes, fixtures and layout with you and your contractor, then furnish and style every room.</span><span class="thumb"><img src="images/svc_design.jpg" alt="Dining area with a linear brass chandelier and white upholstered chairs"></span>
+</a>
+<a class="row rv" href="#services">
+<span style="font-size: 13px; color: #7A5C3E;">02</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 40px; line-height: 1.05;">Home Staging</span><span class="desc" style="color: #4A453F;">We furnish vacant and occupied listings from our own inventory for agents, builders and homeowners, and we have staged a listing on less than a day's notice when an agent needed it.</span><span class="thumb"><img src="images/svc_staging.jpg" alt="Staged living room with two seating areas and a round coffee table"></span>
+</a>
+<a class="row rv" href="#services">
+<span style="font-size: 13px; color: #7A5C3E;">03</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 40px; line-height: 1.05;">Post-Loss Interior Design</span><span class="desc" style="color: #4A453F;">When fire, water or storm damage forces a family out, we design and furnish the house for their return. We work from the insurance scope alongside the adjuster and the restoration contractor.</span><span class="thumb"><img src="images/svc_postloss.jpg" alt="Bright kitchen with a walnut island, blush counter stools and fresh tulips"></span>
+</a>
+<a class="row rv" href="#services" style="border-bottom: 1px solid #D6CDBF;">
+<span style="font-size: 13px; color: #7A5C3E;">04</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 40px; line-height: 1.05;">Custom Projects</span><span class="desc" style="color: #4A453F;">Model homes and units for developers, turnkey staging packages at a set price, holiday installations, and other projects that need our inventory and our install team.</span><span class="thumb"><img src="images/svc_custom.jpg" alt="Open-plan living room in a new construction home, staged before listing"></span>
+</a>
+</section>
+
+<section aria-label="Details from recent projects" class="strip" style="padding: 0 0 128px;">
+<div class="track">
+<img src="images/det1.jpg" alt="Styled console with a ceramic platter, blue vase and glass lamp">
+<img src="images/det2.jpg" alt="Brass linear chandelier over a dining table">
+<img src="images/det3.jpg" alt="Kitchen island styled with tulips and a bowl of lemons">
+<img src="images/det4.jpg" alt="Roof deck with Adirondack chairs and a striped umbrella">
+<img src="images/det5.jpg" alt="Sunflowers on a dark kitchen counter">
+<img src="images/proj_beacon2.jpg" alt="Glass dining table with white lilies and a gilt mirror">
+<img src="images/det1.jpg" alt="" aria-hidden="true">
+<img src="images/det2.jpg" alt="" aria-hidden="true">
+<img src="images/det3.jpg" alt="" aria-hidden="true">
+<img src="images/det4.jpg" alt="" aria-hidden="true">
+<img src="images/det5.jpg" alt="" aria-hidden="true">
+<img src="images/proj_beacon2.jpg" alt="" aria-hidden="true">
+</div>
+</section>
+
+<section id="work" aria-label="Recent projects" style="max-width: 1344px; margin: 0 auto; padding: 0 48px 128px;">
+<div class="rv" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 48px;">
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 52px; line-height: 1;">Recent projects</h2>
+<a href="#work" style="font-size: 13px; letter-spacing: .1em; text-transform: uppercase;">All projects</a>
+</div>
+<div class="pgrid">
+<a class="card c7 rv" href="#work"><div class="frame tall wipe"><img src="images/proj_beacon.jpg" alt="Powder room with banana-leaf wallpaper and blue glazed tile"><img class="alt" src="images/proj_beacon2.jpg" alt="Dining room in the same townhouse with a glass table and gilt mirror"></div><p style="margin: 20px 0 4px; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1.15;">Beacon Street townhouse, Boston</p><p style="margin: 0 0 8px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #7A5C3E;">Interior Design</p><p style="margin: 0; color: #4A453F; max-width: 560px;">We designed the house floor by floor, from the wallpapered powder room and the dining room to the roof deck and the garden entry.</p></a>
+<a class="card c5 rv" href="#work"><div class="frame tall wipe"><img src="images/proj_arlington.jpg" alt="Staged bedroom with a black four-poster bed and abstract art"></div><p style="margin: 20px 0 4px; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1.15;">Single-family home, Brighton</p><p style="margin: 0 0 8px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #7A5C3E;">Home Staging · 2023 · [Result]</p><p style="margin: 0; color: #4A453F;">Four bedrooms, the living room and the sunroom, staged for sale in 2023.</p></a>
+<a class="card c5 rv" href="#work"><div class="frame short wipe"><img src="images/proj_shawmut.jpg" alt="Staged open living area with a zebra-print ottoman and orange pillows"></div><p style="margin: 20px 0 4px; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1.15;">Corner condominium, South End</p><p style="margin: 0 0 8px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #7A5C3E;">Home Staging · 2025 · [Result]</p><p style="margin: 0; color: #4A453F;">A unit with floor-to-ceiling glass on two sides, staged for sale in 2025.</p></a>
+<a class="card c7 rv" href="#work"><div class="frame short wipe"><img src="images/proj_oakland.jpg" alt="New construction kitchen with a walnut island and white counter stools"></div><p style="margin: 20px 0 4px; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1.15;">New construction, Wellesley</p><p style="margin: 0 0 8px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #7A5C3E;">Home Staging for a builder · 2025 · [Result]</p><p style="margin: 0; color: #4A453F; max-width: 560px;">We staged the builder's new single-family home before its first listing photos, including the kitchen, living room, dining room and primary suite.</p></a>
+</div>
+</section>
+
+<section aria-label="Client reviews" style="background: #EAE4DA; padding: 112px 48px;">
+<div style="max-width: 1248px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 64px;">
+<figure class="rv" style="margin: 0;"><blockquote style="margin: 0 0 20px; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1.3;">“Miracle worker! Packed, staged, cleaned, and even painted my listing with less than 12 hours notice!”</blockquote><figcaption style="font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #5A5045;">John C., John Canning Properties</figcaption></figure>
+<figure class="rv" style="margin: 0;"><blockquote style="margin: 0 0 20px; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1.3;">“Having her stage the new construction homes I’ve sold is the best marketing money I could have spent!”</blockquote><figcaption style="font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #5A5045;">Katie F., Friel Real Estate</figcaption></figure>
+</div>
+</section>
+
+<section id="studio" aria-label="Our studio and warehouse" style="max-width: 1344px; margin: 0 auto; padding: 128px 48px;">
+<div class="split">
+<div class="frame wipe" style="height: 680px;"><img src="images/det3.jpg" alt="Kitchen island styled with a white vase of tulips and a tray of lemons"></div>
+<div class="rv">
+<p style="margin: 0 0 20px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #7A5C3E;">About the studio</p>
+<h2 style="margin: 0 0 28px; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 52px; line-height: 1.05;">Our studio and warehouse in Norwood</h2>
+<p style="margin: 0 0 18px; color: #4A453F;">Deb Ellis started the company in 2008. [One or two sentences on Deb's background before 2008, and who on the team clients will work with.]</p>
+<p style="margin: 0 0 18px; color: #4A453F;">We keep our own inventory of sofas, beds, dining sets, rugs, lamps, art and accessories in a warehouse in Norwood, and our own crew delivers, installs and picks up every job. Because we own the inventory instead of renting it from a third party, we can usually schedule an install within [#] days of a signed proposal.</p>
+<p style="margin: 0 0 32px; color: #4A453F;">We work across Boston, Brookline, Newton, Wellesley, Weston, Lexington, Belmont, Watertown and Westwood, and in other towns in Greater Boston on request.</p>
+<a href="#contact" style="font-size: 13px; letter-spacing: .1em; text-transform: uppercase; border-bottom: 1px solid #1C1B19; padding-bottom: 4px; text-decoration: none;">Book a walkthrough</a>
+</div>
+</div>
+</section>
+
+<section aria-label="Garden entry of a Beacon Street townhouse" class="band">
+<img src="images/det6.jpg" alt="Brick path and iron fence leading to a townhouse entry framed by trees">
+<div style="position: absolute; inset: 0; background: rgba(20,18,16,.25);"></div>
+<p style="position: absolute; left: 48px; bottom: 40px; margin: 0; color: #F6F3EE; font-size: 13px; letter-spacing: .1em; text-transform: uppercase;">Garden entry · Beacon Street townhouse</p>
+</section>
+
+<section id="process" aria-label="How a project runs" style="max-width: 1344px; margin: 0 auto; padding: 128px 48px;">
+<h2 class="rv" style="margin: 0 0 56px; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 52px; line-height: 1;">How a project runs</h2>
+<ol class="steps">
+<li class="rv" style="border-top: 1px solid #1C1B19; padding-top: 24px;"><p style="margin: 0 0 4px; font-family: 'Cormorant Garamond', serif; font-size: 44px; font-style: italic; color: #7A5C3E; line-height: 1;">i.</p><p style="margin: 12px 0 8px; font-family: 'Cormorant Garamond', serif; font-size: 28px; line-height: 1.1;">Walkthrough</p><p style="margin: 0; color: #4A453F;">We walk the house with you, measure the rooms, and talk through who the buyer is or how you want to live there. For a listing, we also ask about your photo date and your list date.</p></li>
+<li class="rv" style="border-top: 1px solid #1C1B19; padding-top: 24px;"><p style="margin: 0 0 4px; font-family: 'Cormorant Garamond', serif; font-size: 44px; font-style: italic; color: #7A5C3E; line-height: 1;">ii.</p><p style="margin: 12px 0 8px; font-family: 'Cormorant Garamond', serif; font-size: 28px; line-height: 1.1;">Proposal</p><p style="margin: 0; color: #4A453F;">You get a written plan with the rooms, the pieces and a fixed price before anything moves. Design projects also get a schedule built around your contractor's.</p></li>
+<li class="rv" style="border-top: 1px solid #1C1B19; padding-top: 24px;"><p style="margin: 0 0 4px; font-family: 'Cormorant Garamond', serif; font-size: 44px; font-style: italic; color: #7A5C3E; line-height: 1;">iii.</p><p style="margin: 12px 0 8px; font-family: 'Cormorant Garamond', serif; font-size: 28px; line-height: 1.1;">Install</p><p style="margin: 0; color: #4A453F;">Our team pulls the furniture from Norwood and installs the house in [#] day, with art, rugs, linens and accessories included.</p></li>
+<li class="rv" style="border-top: 1px solid #1C1B19; padding-top: 24px;"><p style="margin: 0 0 4px; font-family: 'Cormorant Garamond', serif; font-size: 44px; font-style: italic; color: #7A5C3E; line-height: 1;">iv.</p><p style="margin: 12px 0 8px; font-family: 'Cormorant Garamond', serif; font-size: 28px; line-height: 1.1;">Pickup</p><p style="margin: 0; color: #4A453F;">When the house sells or the staging term ends, we schedule pickup around your closing date.</p></li>
+</ol>
+</section>
+
+<section id="contact" style="position: relative; overflow: hidden; background: #1C1B19; color: #F6F3EE; padding: 128px 48px 56px;">
+<img src="images/hero1.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .14;">
+<div style="position: relative; max-width: 1248px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 40px;">
+<div class="rv" style="max-width: 640px;">
+<h2 style="margin: 0 0 16px; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(40px, 4.6vw, 64px); line-height: 1.05;">Schedule a walkthrough</h2>
+<p style="margin: 0; color: #CFC7BB;">Deb or a member of the team will walk the house with you, talk through what it needs, and send a written proposal within [#] business days.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+<a href="#contact" style="background: #F6F3EE; color: #1C1B19; text-decoration: none; padding: 16px 28px; font-size: 13px; letter-spacing: .1em; text-transform: uppercase;">Book a time</a>
+<a href="tel:7815895989" style="color: #F6F3EE; font-size: 15px;">781-589-5989</a>
+</div>
+</div>
+<p style="position: relative; max-width: 1248px; margin: 112px auto 0; padding-top: 24px; border-top: 1px solid #3A3631; font-size: 13px; color: #A9A094;">Deb Ellis Designs, Inc. · Norwood, MA · [Instagram] · [Houzz] · [LinkedIn]</p>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6900}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
